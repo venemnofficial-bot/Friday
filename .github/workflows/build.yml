@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "JARVIS_Android_Studio.zip"
+      - "JARVIS_Project.zip"
       - ".github/workflows/build.yml"
 
 permissions:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Unpack JARVIS project
         run: |
-          unzip -q JARVIS_Android_Studio.zip -d source
+          unzip -q JARVIS_Project.zip -d source
           test -f source/JARVIS_Android_Studio/settings.gradle.kts
 
       - name: Build debug APK
